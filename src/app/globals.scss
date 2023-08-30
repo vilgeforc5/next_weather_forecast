@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+html, body {
+    @apply bg-slate-900
+}
+
+@layer components {
+    .pause {
+      animation-play-state: paused;
+    }
+
+    .running {
+        animation-play-state: running;
+    }
+    
+    .outer-padding {
+      @apply p-3 lg:p-4 xl:p-5;
+    }
+
+    .header-text {
+      @apply tracking-wide font-medium uppercase;
+    }
+  
+}
+
+@layer components {
+}
