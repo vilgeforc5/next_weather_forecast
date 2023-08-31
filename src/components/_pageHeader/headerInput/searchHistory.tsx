@@ -5,21 +5,21 @@ import { clearHistory, selectAllHistoryReversed } from "@/redux/features/searchH
 import { DispatchType } from "@/redux/store";
 
 export const SearchHistory = () => {
-    const dispatch = useDispatch <DispatchType>()
+    const dispatch = useDispatch<DispatchType>()
     const historyList = useSelector(selectAllHistoryReversed)
 
     if (historyList.length > 0)
         return (
             <>
-                <div className="flex justify-between bg-zinc-100
+                <div className="flex justify-between
                                 sticky top-0 p-1.5 md:p-2 
                 ">
-                    <h3 className="inline-block  font-semibold text-zinc-700 text-base  lg:text-lg ">
+                    <h3 className="inline-block  font-semibold text-zinc-300/90 text-base  lg:text-lg ">
                         История поиска
                     </h3>
-                    <svg 
+                    <svg
                         className="h-5 w-5 md:w-6 md:h-6 cursor-pointer 
-                                 text-zinc-500 hover:text-zinc-600 mr-1"
+                                 text-zinc-500 hover:text-zinc-400 mr-1"
                         onClick={() => {
                             dispatch(clearHistory())
 
@@ -30,9 +30,9 @@ export const SearchHistory = () => {
                 </div>
                 <ul className="py-0.5   ">
                     {historyList.map(city =>
-                        <li 
+                        <li
                             className="p-1 pl-3 text-sm md:text-base lg:text-lg  cursor-pointer
-                                     hover:text-slate-900 text-slate-500"
+                                     hover:text-slate-400 text-slate-500"
                             onClick={() => {
                                 dispatch(setCurrentLocation(city))
                             }}
@@ -42,7 +42,6 @@ export const SearchHistory = () => {
                         </li>
                     )}
                 </ul>
-
             </>
         )
     else

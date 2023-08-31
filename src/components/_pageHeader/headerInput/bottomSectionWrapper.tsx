@@ -9,7 +9,7 @@ export const BottomSectionWrapper:
                 ${isExpanded ? "grid-rows-1" : "grid-rows-[0]"}
         `}>
             <section className={`
-                 bg-zinc-100 text-slate-900 
+                   black-white-gradient-lr-min text-slate-900 
                    max-h-72 overflow-y-scroll rounded-lg mt-1.5 relative
             `}>
                 {children}

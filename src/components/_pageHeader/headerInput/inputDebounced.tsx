@@ -39,11 +39,13 @@ export const InputDebounced: React.FC<InputDebounced> = ({ setQuery, setIsExpand
                 ref={inputRef}
                 placeholder="Найти город"
                 className=" w-full p-1 md:p-2 pl-3 md:pl-4 
+                            text-slate-400
                             h-10  lg:h-12 
                             lg:text-lg
-                            shadow-sm focus:shadow-md shadow-orange-700 focus:shadow-orange-700
-                            outline-none rounded-lg bg-zinc-200
-                          placeholder:text-slate-500 transition-all"
+                            shadow-black shadow-lg
+                            focus:shadow-md focus:shadow-orange-700
+                            outline-none rounded-lg black-white-gradient-lr
+                          placeholder:text-slate-400/80 transition-all"
                 value={input}
                 onChange={(e) => setInput(e.target.value)}
                 onFocus={() => {
@@ -53,9 +55,9 @@ export const InputDebounced: React.FC<InputDebounced> = ({ setQuery, setIsExpand
             {/* МОЖНО ДОБАВИТЬ ФИЧУ - ПО КЛИКУ ИЛИ ENTER ВСТАВЛЯТЬ ПЕРВЫЙ ЭЛЕМЕНТ В СПИСКЕ АВТОКОМПЛИТА. */}
             <svg className="w-8 h-8 animate-wiggle pause hover:running  
                             absolute 
-                            cursor-pointer active:bg-slate-400 rounded-lg p-1
+                            cursor-pointer active:bg-slate-700 rounded-lg p-1
                             right-1 lg:right-2 top-1 lg:top-2
-                            text-slate-600"
+                            text-slate-500"
                 onClick={() => {
                     if (inputRef.current) {
                         inputRef.current.focus()
