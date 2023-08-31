@@ -9,7 +9,7 @@ const config: Config = {
     extend: {
       backgroundImage: {
         "slate-dark-gradient" : "radial-gradient(at left top, rgb(15, 23, 50), rgb(2, 6, 23))",
-
+        "slate-purple-gradient" : "radial-gradient(at left top, rgb(15, 23, 50), rgb(20, 10, 40))",
       }
     }
   },

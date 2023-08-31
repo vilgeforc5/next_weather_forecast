@@ -34,6 +34,33 @@ body {
     background-color: rgb(12, 20, 40);
     background-image: radial-gradient(at 0% 70%, rgb(0, 0, 0) 0, transparent 100%);
   }
+
+  .progress-bar-container {
+    @apply bg-slate-900 rounded-lg h-2.5 w-full relative;
+
+  }
+  
+  .progress-bar-indicator {
+    height: 100%;
+    width: 100%;
+    border-radius: 25px;
+     /* this will do the magic */
+    -webkit-mask:linear-gradient(#fff 0 0);
+            mask:linear-gradient(#fff 0 0);
+  }
+  .progress-bar-indicator::before {
+    content:"";
+    position:absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    background: rgb(0,187,255);
+    background: -moz-linear-gradient(71deg, rgba(0,187,255,1) 17%, rgba(0,255,194,1) 31%, rgba(234,255,41,1) 48%, rgba(255,41,41,1) 100%);
+    background: -webkit-linear-gradient(71deg, rgba(0,187,255,1) 17%, rgba(0,255,194,1) 31%, rgba(234,255,41,1) 48%, rgba(255,41,41,1) 100%);
+    background: linear-gradient(71deg, rgba(0,187,255,1) 17%, rgba(0,255,194,1) 31%, rgba(234,255,41,1) 48%, rgba(255,41,41,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#00bbff",endColorstr="#ff2929",GradientType=1);
+  }
 }
 
 body {
