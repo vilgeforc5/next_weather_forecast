@@ -32,3 +32,6 @@ export interface IYandexGeoObjectApiResponse {
     }
 }
 
+
+export type viewportSizes = "sm" | "md" | "lg" | "xl" | "2xl";
+

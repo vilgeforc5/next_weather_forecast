@@ -5,15 +5,14 @@ export const WeatherConditionCard = () => {
             w-full h-full rounded-lg  bg-slate-purple-gradient
             p-4 md:p-6 xl:p-8
              shadow-slate-950 shadow-lg
-             flex flex-col
+                grid grid-rows-3
             ">
-            <div className="flex items-center justify-between basis-1/3">
+            <div className="flex items-center justify-between ">
                 <div className="flex items-center gap-x-1">
                     {/* big - 32 32 */}
                     {/* medium - */}
 
                     <svg
-                        viewBox="0 0 28 28"
                         fill="currentColor"
                         className="h-7 w-7 text-slate-300"
                     >
@@ -21,7 +20,7 @@ export const WeatherConditionCard = () => {
                     </svg>
                     {/* big - text-xl */}
                     <p className="text-slate-200 text-xl">
-                        Temperature
+                        Температура
                     </p>
                 </div>
                 <div className="text-slate-500">
@@ -29,7 +28,7 @@ export const WeatherConditionCard = () => {
                 </div>
             </div>
 
-            <div className="flex items-center  basis-1/3">
+            <div className="flex items-center">
                 <p className="text-5xl inline-block text-slate-50"> 
                     13
                 </p>
@@ -37,7 +36,7 @@ export const WeatherConditionCard = () => {
                     mm/h 
                 </span>
             </div>
-            <div className="flex justify-between items-center basis-1/3 gap-x-4">
+            <div className="flex justify-between items-center  gap-x-4">
                 <div className="text-slate-500">
                     {13-10}mm/h
                 </div>  

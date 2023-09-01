@@ -8,12 +8,11 @@ import { Provider } from "react-redux";
 import { PersistGate } from 'redux-persist/integration/react'
 import store from "@/redux/store";
 import persistStore from "redux-persist/es/persistStore";
-import { WeatherConditionCard } from "@/components/_weatherConditionCard/weatherConditionCard";
+import { Grid } from "@/components/_grid/grid";
 
 const persistor = persistStore(store)
 
 export default function Home() {
-
   return (
     <>
       <Provider store={store}>
@@ -21,14 +20,29 @@ export default function Home() {
           <PageHeader />
           <main className="main flex flex-col outer-padding pt-2">
             <LocationInfo />
-            <div className="h-full grid grid-cols-3 grid-rows-2">
-              <WeatherConditionCard />
-            </div>
+            <Grid col={3} row={2}>
+              <Grid.GridCell >
+                <div className="border-2 border-slate-500 h-full w-full">
+                </div>
+              </Grid.GridCell>
+              <Grid.GridCell>
+                <div className="border-2 border-slate-500 h-full w-full">
+                </div>
+              </Grid.GridCell>
+              <Grid.GridCell>
+                <div className="border-2 border-slate-500 h-full w-full">
+                </div>
+              </Grid.GridCell>
+              <Grid.GridCell col_span={3}>
+                <div className="border-2 border-slate-500 h-full w-full">
+                </div>
+              </Grid.GridCell>
+            </Grid>
           </main>
-          <footer className="footer">
+          <footer className="footer h-10">
             footer
           </footer>
-          </PersistGate>
+        </PersistGate>
       </Provider>
     </>
   )
