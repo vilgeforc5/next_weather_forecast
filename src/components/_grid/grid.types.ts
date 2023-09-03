@@ -3,7 +3,11 @@ import { Breakpoints } from "@/types/types";
 
 type ResponsiveStyles <T extends any> = Partial<Record<Breakpoints, Partial<T>>> 
 
+<<<<<<< HEAD
 type GridFlowType = "row" | "col" | "dense" | "col-dense" | "row-dense";
+=======
+export type GridFlowType = "row" | "col" | "dense" | "col-dense" | "row-dense";
+>>>>>>> fa019d955088cada9cf08d1829a9946a5c8763ce
 
 export interface GridParams {
     row: number;
@@ -22,9 +26,13 @@ interface GridProps extends GridParams {
     responsive?: GridResponsive
 }
 
+<<<<<<< HEAD
 export type GridPropsStyledComponentProps = { 
     [P in keyof Omit<GridProps, "children"> as `$${P}`]: GridProps[P]
 }
+=======
+export type GridPropsStyledComponentProps = { [P in keyof Omit<GridProps, "children"> as `$${P}`]: GridProps[P]}
+>>>>>>> fa019d955088cada9cf08d1829a9946a5c8763ce
 
 export interface GridCellParams { 
     row_span?: number;
@@ -38,9 +46,14 @@ interface GridCellProps extends GridCellParams  {
     responsive?: GridCellResponsive;
 } 
 
+<<<<<<< HEAD
 export type GridCellPropsStyledComponentProps = { 
     [P in keyof Omit<GridCellProps, "children"> as `$${P}`]: GridCellProps[P]
 }
+=======
+export type GridCellPropsStyledComponentProps = { [P in keyof Omit<GridCellProps, "children"> as `$${P}`]: GridCellProps[P]}
+
+>>>>>>> fa019d955088cada9cf08d1829a9946a5c8763ce
 
 export interface GridComponent extends React.FC<GridProps> {
     GridCell: ComponentType<GridCellProps>;
