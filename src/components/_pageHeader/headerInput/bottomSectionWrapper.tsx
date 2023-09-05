@@ -5,6 +5,7 @@ export const BottomSectionWrapper:
     = ({ children, isExpanded }) => {
     return (
         <div className={`
+                relative z-10 
                 grid overflow-hidden
                 ${isExpanded ? "grid-rows-1" : "grid-rows-[0]"}
         `}>

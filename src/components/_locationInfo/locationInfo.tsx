@@ -8,7 +8,7 @@ export const LocationInfo: React.FC = () => {
     const [lat, lon] = myLocation.pos.split(" ").map(item => Number(item))
 
     return (
-        <div className="text-indigo-300 text-lg md:text-xl font-semibold  tracking-wide md:pt-0">
+        <div className="text-indigo-300 text-lg md:text-xl font-semibold  tracking-wide md:pt-0 mb-1.5 md:mb-2">
             <p className="mr-2.5">  
                 {myLocation.name} 
             </p>

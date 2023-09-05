@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { createCellStyles, createGridStyles, createGridMediaQueries, createGridCellMediaQueries } from "./createMediaQuery";
+import { createCellStyles, createGridStyles, createGridMediaQueries, createGridCellMediaQueries } from "./createStyles";
 import { GridCellPropsStyledComponentProps, GridPropsStyledComponentProps } from "./grid.types";
 
 export const GridStyled = styled.div <GridPropsStyledComponentProps>`
