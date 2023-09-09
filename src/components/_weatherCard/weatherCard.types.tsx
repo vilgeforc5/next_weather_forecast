@@ -4,7 +4,7 @@ import React, { ReactElement, ReactNode } from "react";
 interface WeatherCardProps {
     renderHeader: () => ReactElement;
     renderMain: () => ReactElement;
-    prefix: string;
+    // prefix?: string;
     addOn?: ReactNode;
 }
 

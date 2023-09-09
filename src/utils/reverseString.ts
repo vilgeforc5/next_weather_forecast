@@ -1,0 +1,1 @@
+export const reverseString = (str: string, delim: string = " ") => str.split(delim).reverse().join(" ")

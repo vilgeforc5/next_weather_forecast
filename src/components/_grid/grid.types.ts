@@ -24,9 +24,9 @@ interface GridProps extends GridParams {
 
 export type GridPropsStyledComponentProps = { [P in keyof Omit<GridProps, "children"> as `$${P}`]: GridProps[P]}
 
-export interface GridCellParams { 
-    row_span?: number;
-    col_span?: number;
+export interface GridCellParams{ 
+    row_span?: number | "full";
+    col_span?: number | "full";
 }
 
 export type GridCellResponsive = ResponsiveStyles<GridCellParams>

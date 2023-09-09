@@ -8,7 +8,10 @@ import { Provider } from "react-redux";
 import { PersistGate } from 'redux-persist/integration/react'
 import store from "@/redux/store";
 import persistStore from "redux-persist/es/persistStore";
-import { WeatherConditionInfo } from "@/components/_weatherConditionInfo/weatherConditionInfo";
+import { WeatherCardsSection } from "@/components/_weatherCardsSection/weatherCardsSection";
+import { Footer } from "@/components/_footer.tsx/footer";
+import { ForecastSection } from "@/components/_forecastSection/forecastSection";
+
 
 const persistor = persistStore(store)
 
@@ -18,13 +21,12 @@ export default function Home() {
       <Provider store={store}>
         <PersistGate persistor={persistor} >
           <PageHeader />
-          <main className="main flex flex-col outer-padding pt-2">
+          <main className="main flex flex-col outer-padding pb-0 pt-1.5">
             <LocationInfo />
-            <WeatherConditionInfo />
+            <WeatherCardsSection />
+            <ForecastSection />
           </main>
-          <footer className="footer h-10">
-            footer
-          </footer>
+          <Footer />
         </PersistGate>
       </Provider>
     </>
