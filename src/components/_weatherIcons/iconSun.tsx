@@ -4,7 +4,7 @@ import { IconWeather } from "./icons.types";
 export const IconSun : IconWeather = ({color})  => {
   return (
     <svg
-      viewBox="0 0 26 26"
+      viewBox="0 0 28 28"
       fill="currentColor"
       className={`h-5 w-5 md:h-6 md:w-6 lg:h-7 lg:w-7  text-${color}`}
     >

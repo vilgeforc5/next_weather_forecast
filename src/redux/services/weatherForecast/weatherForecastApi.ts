@@ -1,6 +1,6 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
 import { weatherApiKey } from '@/apiKeys';
-import { CurrentForecastRequestParams, FutureForecastRequestParams, CurrentForecastResponse} from "@/types/forecastApiTypes"
+import { CurrentForecastRequestParams, FutureForecastRequestParams, CurrentForecastResponse, FutureForecastResponse} from "@/types/forecastApiTypes"
 
 export const forecastApi = createApi({
     reducerPath: "forecast",
@@ -23,8 +23,8 @@ export const forecastApi = createApi({
                 })
             }
         }),
-        getFutureForecast: builder.query({
-            query: (requestParams: FutureForecastRequestParams) => ({
+        getFutureForecast: builder.query<FutureForecastResponse, FutureForecastRequestParams>({
+            query: (requestParams) => ({
                 url: `forecast.json?key=${weatherApiKey}`,
                 params: ({
                     q: requestParams.location,
@@ -36,4 +36,9 @@ export const forecastApi = createApi({
     }),
 })
 
-export const {useGetCurrentForecastQuery} = forecastApi
+export const {
+    useGetCurrentForecastQuery, 
+    useGetFutureForecastQuery,
+    useLazyGetCurrentForecastQuery,
+    useLazyGetFutureForecastQuery
+} = forecastApi

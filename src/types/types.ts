@@ -36,3 +36,5 @@ export interface IYandexGeoObjectApiResponse {
 export type Breakpoints = "sm" | "md" | "lg" | "xl" | "2xl";
 
 
+export type ArrayElement<ArrayType extends readonly unknown[]> = 
+  ArrayType extends readonly (infer ElementType)[] ? ElementType : never;

@@ -11,7 +11,7 @@ export const BottomSectionWrapper:
         `}>
             <section className={`
                    black-white-gradient-lr-min text-slate-900 
-                   max-h-72 overflow-y-scroll rounded-lg mt-1.5 relative
+                   max-h-64 md:max-h-72 overflow-y-scroll rounded-lg mt-1.5 relative
             `}>
                 {children}
             </section>

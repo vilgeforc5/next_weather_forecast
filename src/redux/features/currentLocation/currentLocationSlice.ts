@@ -11,8 +11,9 @@ const currentLocationSlice = createSlice({
     name: "currentLocation",
     initialState,
     reducers: {
-        setCurrentLocation: (_, action: PayloadAction<ILocation>) => {
-            return action.payload
+        setCurrentLocation: (prevState, action: PayloadAction<ILocation>) => {
+            if (prevState.name !== action.payload.name && prevState.pos !== action.payload.pos)
+                return action.payload
         }
     },
 })

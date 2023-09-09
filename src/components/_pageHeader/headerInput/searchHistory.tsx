@@ -13,8 +13,9 @@ export const SearchHistory = () => {
             <>
                 <div className="flex justify-between
                                 sticky top-0 p-1.5 md:p-2 
+                                bg-slate-950/90
                 ">
-                    <h3 className="inline-block  font-semibold text-zinc-300/90 text-base  lg:text-lg ">
+                    <h3 className="inline-block bg-slate-950  font-semibold text-zinc-300/90 text-base  lg:text-lg ">
                         История поиска
                     </h3>
                     <svg

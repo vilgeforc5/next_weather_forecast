@@ -1,5 +1,6 @@
 import "./globals.scss";
 import type { Metadata } from 'next'
+import 'react-loading-skeleton/dist/skeleton.css'
 
 export const metadata: Metadata = {
   title: 'Weather Now',
