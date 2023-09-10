@@ -1,10 +1,9 @@
-import React, { ReactElement } from "react";
+import React, { ReactElement , ReactNode } from "react";
 
 
 interface WeatherCardProps {
     renderHeader: () => ReactElement;
     renderMain: () => ReactElement;
-    // prefix?: string;
     addOn?: ReactNode;
 }
 
