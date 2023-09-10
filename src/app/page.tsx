@@ -12,6 +12,8 @@ import { WeatherCardsSection } from "@/components/_weatherCardsSection/weatherCa
 import { Footer } from "@/components/_footer.tsx/footer";
 import { ForecastSection } from "@/components/_forecastSection/forecastSection";
 
+import 'react-toastify/dist/ReactToastify.css';
+import { SupportMessage } from "@/components/_supportMessage/supportMessage";
 
 const persistor = persistStore(store)
 
@@ -21,6 +23,7 @@ export default function Home() {
       <Provider store={store}>
         <PersistGate persistor={persistor} >
           <PageHeader />
+          <SupportMessage />
           <main className="main flex flex-col outer-padding pb-0 pt-1.5">
             <LocationInfo />
             <WeatherCardsSection />
