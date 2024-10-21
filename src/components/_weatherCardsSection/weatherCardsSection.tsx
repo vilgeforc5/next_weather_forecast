@@ -49,7 +49,7 @@ export const WeatherCardsSection = () => {
                 >
                     <WeatherCard
                         addOn={
-                            <p className='text-xs md:text-sm lg:text-base text-slate-400'>
+                            <p className='text-xs md:text-sm lg:text-base text-slate-400 overflow-hidden'>
                                 {currentData?.current ?
                                     currentData.current.condition.text :
                                     <Skeleton width="50px" height="10px" {...defaultSkeletonStyles} />
@@ -91,7 +91,7 @@ export const WeatherCardsSection = () => {
                 <Grid.GridCell>
                     <WeatherCard
                         addOn={
-                            <p className='text-xs md:text-sm lg:text-base text-slate-400'>
+                            <p className='text-xs md:text-sm lg:text-base text-slate-400 overflow-hidden'>
                                 {currentData?.current ?
                                     currentData.current.wind_dir :
                                     <Skeleton width="50px" height="10px" {...defaultSkeletonStyles} />
